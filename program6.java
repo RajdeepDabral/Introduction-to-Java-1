@@ -1,25 +1,26 @@
 /*Q6. There is an array with every element repeated twice except one. Find that element. */
+package com.company;
 import java.util.*;
 class Program{
 
     public static void main(String [] args){
 
         Scanner scanner = new Scanner(System.in);
-        String arr=null;
-        char chararr[]=null;
+        String str=null;
+        char charstr[]=null;
         char find;
         int found=0,present=0;
         System.out.println("Enter String : ");
-        arr=scanner.nextLine();
-        chararr=arr.toCharArray();
+        str=scanner.nextLine();
+        charstr=str.toCharArray();
 
-        for(int i=0;i<chararr.length;i++){
-            find=chararr[i];
-            for(int j=0;j<chararr.length;j++){
+        for(int i=0;i<charstr.length;i++){
+            find=charstr[i];
+            for(int j=0;j<charstr.length;j++){
                 if(i==j){
                     continue;
                 }
-                else if(find==chararr[j]){
+                else if(find==charstr[j]){
                     found=1;
                     break;
                 }

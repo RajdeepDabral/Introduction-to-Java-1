@@ -1,4 +1,7 @@
-/*Q3. Write a program to find the number of occurrences of a character in a string without using loop */
+/*
+Q3. Write a program to find the number of occurrences of a character in a string without using loop.
+*/
+package com.company;
 import java.util.*;
 class Program{
     public static int counter(String str , int start ,int end , int total,int find){
@@ -16,14 +19,15 @@ class Program{
     public static void main(String [] args){
 
         Scanner scanner = new Scanner(System.in);
-        String arr=null;
+        String str=null;
         char find;
         int result=0;
         System.out.println("Enter String : ");
-        arr=scanner.nextLine();
-        System.out.println("Enter Char to Find : ");
-        find=scanner.next().charAt(0);  
-        result=Program.counter(arr,0,arr.length(),0,find);
-        System.out.println("Total occurance of "+find+" : "+result);
+        str=scanner.nextLine();
+        for(int i=0;i<str.length();i++){
+            find=str.charAt(i);
+            result=Program.counter(str,0,str.length(),0,find);
+            System.out.println("Total occurance of "+find+" : "+result);
+        }
     }
 }
